@@ -10,12 +10,16 @@ from rest_framework.routers import DefaultRouter
 from core.views import UserViewSet
 from core.views import AcessorioViewSet
 from core.views import CorViewSet
+from core.views import ModeloViewSet
+from core.views import VeiculoViewSet
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r"acessorio", AcessorioViewSet)
 router.register(r"cor", CorViewSet)
+router.register(r"modelo", ModeloViewSet)
+router.register(r"veiculo", VeiculoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
